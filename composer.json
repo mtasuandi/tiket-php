@@ -1,17 +1,23 @@
 {
   "name": "mtasuandi/tiket-php",
+  "type": "library",
   "description": "Tiket.com PHP Wrapper",
   "license": "MIT",
-  "keywords": ["tiket"],
+  "keywords": ["tiket.com api", "tiket.com", "tiket"],
+  "homepage": "https://github.com/mtasuandi/tiket-php",
   "authors": [
     {
       "name": "M Teguh A Suandi",
-      "email": "mteguhasuandi@gmail.com"
+      "email": "mteguhasuandi@gmail.com",
+      "homepage": "http://mtasuandi.com"
     }
   ],
-  "require": {},
+  "require": {
+    "php": ">=5.5.0",
+    "guzzlehttp/guzzle": "~6.0"
+  },
   "require-dev": {
-    "phpunit/phpunit": "4.0.*"
+    "phpunit/phpunit": "4.4.1"
   },
   "autoload": {
     "psr-4": {
