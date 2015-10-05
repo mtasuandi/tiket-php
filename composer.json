@@ -1,0 +1,21 @@
+{
+  "name": "mtasuandi/tiket-php",
+  "description": "Tiket.com PHP Wrapper",
+  "license": "MIT",
+  "keywords": ["tiket"],
+  "authors": [
+    {
+      "name": "M Teguh A Suandi",
+      "email": "mteguhasuandi@gmail.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "4.0.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mtasuandi\\Tiket\\": "src"
+    }
+  }
+}
