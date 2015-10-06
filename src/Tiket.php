@@ -1,4 +1,5 @@
-<?php namespace Mtasuandi\Tiket;
+<?php
+namespace Mtasuandi\Tiket;
 
 class Tiket {
 	public function hello()

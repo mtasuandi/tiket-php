@@ -3,25 +3,54 @@
 # Tiket.com PHP Wrapper
 Tiket.com PHP Wrapper http://docs.tiket.com/.
 
+# Quickstart
+Register for an API key for production [here](http://www.tiket.com/affiliate "Affiliate") and for development [here](http://sandbox.tiket.com/affiliate "Sandbox").
+
+## Environment
+By default, the API will point to sandbox url. If you want to change to production, change Util/config.php.
+
+From:
+```
+'settings' => [
+	'version' => '1.0',
+	/**
+	 * Determine application environment
+	 * Development: api-sandbox
+	 * Production: api
+	 */
+	'api' => 'api-sandbox'
+	]
+```
+To:
+```
+'settings' => [
+	'version' => '1.0',
+	/**
+	 * Determine application environment
+	 * Development: api-sandbox
+	 * Production: api
+	 */
+	'api' => 'api'
+	]
+```
+
+## Usage Auth
+```
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Mtasuandi\Tiket\Auth\TiketAuth;
+use Mtasuandi\Tiket\Exceptions\AuthException;
+
+$auth = new TiketAuth( 'API_KEY' );
+
+try {
+	$access_token = $auth->getToken();
+	echo '<pre>'; print_r( $access_token ); echo '</pre>';
+} catch (AuthException $e) {
+	echo $e->getMessage();
+}
+```
+
 # License
-The MIT License (MIT)
-
-Copyright (c) 2015 M Teguh A Suandi
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The MIT License (MIT).
