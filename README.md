@@ -6,6 +6,11 @@ Tiket.com PHP Library http://docs.tiket.com/.
 # Quickstart
 Register for an API key for production [here](http://www.tiket.com/affiliate "Affiliate") and for development [here](http://sandbox.tiket.com/affiliate "Sandbox").
 
+## Installation
+```
+composer require mtasuandi/tiket-php dev-master
+```
+
 ## Environment
 By default, the API will point to sandbox url. If you want to change to production, change Util/config.php.
 
