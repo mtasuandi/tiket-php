@@ -33,6 +33,7 @@ class TiketAuth {
 	public function getToken()
 	{
 		$params = [
+			'verify' => false,
 			'query' => [
 				'method' => 'getToken',
 				'secretkey' => $this->apiKey
