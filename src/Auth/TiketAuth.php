@@ -6,7 +6,6 @@ use Mtasuandi\Tiket\Exceptions\AuthException;
 use Mtasuandi\Tiket\Util\Config;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Psr7\Request;
 
 /**
  * Class that implement necessary functionality to obtain an access token from a user
