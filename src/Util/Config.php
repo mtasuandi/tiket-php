@@ -33,7 +33,7 @@ class Config {
 	 * @param 		index - location of the property to obtain
 	 * @return 		string
 	 */
-	public function get( $index )
+	public static function get( $index )
 	{
 		$index = explode( '.', $index );
 		return self::getValue( $index, self::$props );
@@ -45,7 +45,7 @@ class Config {
 	 * @param 		array $value The portion of the config array to process
 	 * @return 		mixed
 	 */
-	private function getValue( $index, $value )
+	private static function getValue( $index, $value )
 	{
 		if ( is_array( $index ) && count( $index ) ) {
 			$current_index = array_shift( $index );
