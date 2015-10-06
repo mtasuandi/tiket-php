@@ -10,7 +10,7 @@ Register for an API key for production [here](http://www.tiket.com/affiliate "Af
 By default, the API will point to sandbox url. If you want to change to production, change Util/config.php.
 
 From:
-```
+```php
 'settings' => [
 	'version' => '1.0',
 	/**
@@ -22,7 +22,7 @@ From:
 	]
 ```
 To:
-```
+```php
 'settings' => [
 	'version' => '1.0',
 	/**
@@ -35,7 +35,7 @@ To:
 ```
 
 ## Usage Auth
-```
+```php
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
