@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/mtasuandi/tiket-php.svg?branch=master)](https://travis-ci.org/mtasuandi/tiket-php)
 
-# Tiket.com PHP Wrapper
-Tiket.com PHP Wrapper http://docs.tiket.com/.
+# Tiket.com PHP Library
+Tiket.com PHP Library http://docs.tiket.com/.
 
 # Quickstart
 Register for an API key for production [here](http://www.tiket.com/affiliate "Affiliate") and for development [here](http://sandbox.tiket.com/affiliate "Sandbox").
