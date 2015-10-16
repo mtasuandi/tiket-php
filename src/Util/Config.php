@@ -17,6 +17,16 @@ class Config {
 			'base_url' => 'https://%s.tiket.com/',
 			'get_token' => 'apiv1/payexpress'
 		],
+		'response' => [
+			/**
+			 * Available format:
+			 * array
+			 * json
+			 * xml
+			 * serialize
+			 */
+			'format' => 'json'
+		],
 		'settings' => [
 			'version' => '1.0',
 			/**

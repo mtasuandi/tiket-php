@@ -35,12 +35,13 @@ class TiketAuth {
 			'verify' => false,
 			'query' => [
 				'method' => 'getToken',
-				'secretkey' => $this->apiKey
+				'secretkey' => $this->apiKey,
+				'output' => Config::get( 'response.format' )
 			]
 		];
 
 		$baseUrl = sprintf( Config::get( 'endpoints.base_url' ), Config::get( 'settings.api' ) ) . Config::get( 'endpoints.get_token' );
-		
+
 		try {
 			$response = $this->client->request( 'GET', $baseUrl, $params );
 			$body = $response->getBody();
