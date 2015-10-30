@@ -15,7 +15,11 @@ class Config {
 	private static $props = [
 		'endpoints' => [
 			'base_url' => 'https://%s.tiket.com/',
-			'get_token' => 'apiv1/payexpress'
+			'get_token' => 'apiv1/payexpress',
+			'general_list_currency' => 'general_api/listCurrency',
+			'general_list_language' => 'general_api/listLanguage',
+			'general_list_country' => 'general_api/listCountry',
+			'general_transaction_policies' => 'general_api/getPolicies'
 		],
 		'response' => [
 			/**
@@ -25,7 +29,7 @@ class Config {
 			 * xml
 			 * serialize
 			 */
-			'format' => 'json'
+			'format' => 'array'
 		],
 		'settings' => [
 			'version' => '1.0',
@@ -34,7 +38,12 @@ class Config {
 			 * Development: api-sandbox
 			 * Production: api
 			 */
-			'api' => 'api-sandbox'
+			'api' => 'api-sandbox',
+			/**
+			 * User Agent header required when API request
+			 * @format 	twh:[BUSINESS_ID];[BUSINESS_NAME];
+			 */
+			'user_agent' => '21417957;Kreaxy Digital Media;'
 		]
 	];
 

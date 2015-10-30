@@ -20,7 +20,7 @@ class TiketAuth {
 	public function __construct( $apiKey )
 	{
 		$this->apiKey = $apiKey;
-		$this->client = new Client(['headers' => ['twh' => '21417957;Kreaxy Digital Media;']]);
+		$this->client = new Client();
 	}
 
 	/**
